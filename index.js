@@ -1,12 +1,21 @@
+// A program that outputs your zodiac sign based on the day
+//start by getting the date
 var today = new Date();
 var signs_zod = ["Capricorn", "Aguarius", "Pisces", "Aries", 
 "taurus", "Gemini", "cancer", "leo", "Virgo", "Libra", "Scorpio", 
 "Sagittarius" ];
-
+//get the day and month
 var day = today.getDate();
 var month = today.getMonth();
+//setting zodicsign variable to a string 
 var zodiacsign = "";
+//proceed through the months
 switch(month)
+
+
+//conditional statements stating
+//parameters for the certain sign then calling to 
+// the array signs_zod
 
 {
 	case 0: {//January
