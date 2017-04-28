@@ -1,93 +1,128 @@
-// A program that outputs your zodiac sign based on the day
-//start by getting the date
-var today = new Date();
-var signs_zod = ["Capricorn", "Aguarius", "Pisces", "Aries", 
-"taurus", "Gemini", "cancer", "leo", "Virgo", "Libra", "Scorpio", 
-"Sagittarius" ];
-//get the day and month
-var day = today.getDate();
-var month = today.getMonth();
-//setting zodicsign variable to a string 
-var zodiacsign = "";
-//proceed through the months
-switch(month)
+var readline = require('readline');
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
 
-//conditional statements stating
-//parameters for the certain sign then calling to 
-// the array signs_zod
 
-{
-	case 0: {//January
-					if(day < 20)
-							zodiacsign = signs_zod[0];
-					else
-							zodiacsign = signs_zod[1];
-				}break;
-	case 1: {//February
-					if(day < 19)
-							zodiacsign = signs_zod[1];
-					else
-							zodiacsign = signs_zod[2];
-				}break;
-	case 2: {//March
-					if(day < 21)
-							zodiacsign = signs_zod[2];
-					else
-							zodiacsign = signs_zod[3];
-				}break;
-	case 3:{//April
-					if(day < 20)
-							zodiacsign = signs_zod[3];
-					else
-							zodiacsign = signs_zod[4];
-				}break;
-	case 4:{//May
-					if(day < 21)
-							zodiacsign = signs_zod[4];
-					else
-							zodiacsign = signs_zod[5];
-				}break;
-	case 5:{//June
-					if(day < 21)
-							zodiacsign = signs_zod[5];
-					else
-							zodiacsign = signs_zod[6];
-				}break;
-	case 6:{//July
-					if(day < 23)
-							zodiacsign = signs_zod[6];
-					else
-							zodiacsign = signs_zod[7];
-				}break;
-	case 7:{//August 
-					if(day < 23)
-							zodiacsign = signs_zod[7];
-					else
-							zodiacsign = signs_zod[8];
-				}break;
-	case 8:{//September 
-					if(day < 23)
-							zodiacsign = signs_zod[8];
-					else
-							zodiacsign = signs_zod[9];
-				}break;
-	case 9:{//October 
-					if(day < 23)
-							zodiacsign = signs_zod[9];
-					else
-							zodiacsign = signs_zod[10];
-				}break;
-	case 10:{//November 
-					if(day < 22)
-							zodiacsign = signs_zod[10];
-					else
-							zodiacsign = signs_zod[11];
-				}break;
-	case 11:{//December
-					if(day < 22)
-							zodiacsign = signs_zod[11];
-					else
-							zodiacsign = signs_zod[0];
-				}break;
-}
+function getZodiacsign(day, month) {
+ 	
+
+
+	var ZSigns = (
+		'capricorn', 
+		'aquarious', 
+		'pices', 
+		'aries', 
+		'taurus', 
+		'gemini',
+		'cancer',
+		'leo',
+		'virgo',
+		'libra',
+		'scorpio',
+		'Sagittarius' 
+)
+
+					if(month == 1 && day <= 20) {
+						return ZSigns[0]
+					}
+							
+					else if(month == 1 && day > 20) {
+						return ZSigns[1]
+					}
+
+				
+
+					if(month == 2 && day <= 19) {
+						return ZSigns[1]
+					}
+					else if(month == 2 && day > 19) {
+						return ZSigns[2]
+					}
+				
+	
+					if(month == 3 && day < 21) {
+						return ZSigns[2]
+					}
+					else if(month == 3 && day > 21) {
+						return ZSigns[3]
+					}
+				
+					if(month == 4 && day <= 20) { 
+						return ZSigns[3]
+					}
+					
+					else if(month == 4 && day > 20) {
+						return ZSigns[4]
+					}
+				
+
+					if(month == 5 && day < 21) {
+						return ZSigns[4]
+					}
+					
+					else if(month == 5 && day >= 21) {
+						return ZSigns[5]
+					}
+				
+	
+					if( month == 6 && day < 21) {
+						return ZSigns[5]
+					}
+					else if (month == 6 && day > 21) {
+						return ZSigns[6]
+					}
+				
+
+					if( month == 7 && day <= 23) {
+						return ZSigns[6]
+					}
+					else if (month == 7 && day > 23) {
+						return ZSigns[7]
+					}
+				
+
+					if(month == 8 && day < 23) {
+						return ZSigns[7]
+					}
+					else if(month == 8 && day >= 23) {
+						return ZSigns[8]
+					}
+			
+ 
+					if(month == 9 && day <= 23) {
+						return ZSigns[8]
+					}
+					else if (month == 9 && day > 23) {
+						return ZSigns[9]
+					}
+				
+ 
+					if( month == 10 && day < 23) {
+						return ZSigns[9]
+					}
+					else if (month == 10 && day > 23) {
+						return ZSigns[10]
+					}
+				
+
+					if(month == 12 && day <= 22) {
+						return ZSigns[10]
+					}
+					else if (month == 11 && day > 22) {
+						return ZSigns[11]
+					}
+				
+	
+					if(month == 12 && day < 22) {
+						return ZSigns[11]
+					}
+					else if (month == 12 && day > 22) {
+						return ZSigns[0]
+					}
+
+				}
+				
